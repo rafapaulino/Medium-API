@@ -23,6 +23,7 @@ class ComposerStaticInitf09f4704e2f8205927867cd7951d40ca
     public static $classMap = array (
         'Medium\\MediumAuth' => __DIR__ . '/../..' . '/src/MediumAuth.php',
         'Medium\\MediumAuthorizeUrl' => __DIR__ . '/../..' . '/src/MediumAuthorizeUrl.php',
+        'Medium\\MediumMe' => __DIR__ . '/../..' . '/src/MediumMe.php',
         'Medium\\MediumRequest' => __DIR__ . '/../..' . '/src/MediumRequest.php',
         'Medium\\MediumStateManager' => __DIR__ . '/../..' . '/src/MediumStateManager.php',
     );

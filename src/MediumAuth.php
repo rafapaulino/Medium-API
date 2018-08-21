@@ -30,9 +30,25 @@ class MediumAuth extends MediumRequest
             $this->_request, 
             $this->_params,
             array(
-                'Content-Type' => 'application/x-www-form-urlencoded',
-                'Accept' => 'application/json',
-                'Accept-Charset' => 'utf-8',
+                'Content-Type: application/x-www-form-urlencoded',
+                'Accept: application/json',
+                'Accept-Charset: utf-8',
+            )
+        );
+    }
+
+    public function refreshToken($refreshToken): array
+    {
+        $this->_params['refresh_token'] = $refreshToken;   
+        $this->_params['grant_type'] = 'refresh_token';
+
+        return $this->send(
+            $this->_request, 
+            $this->_params,
+            array(
+                'Content-Type: application/x-www-form-urlencoded',
+                'Accept: application/json',
+                'Accept-Charset: utf-8',
             )
         );
     }

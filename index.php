@@ -4,6 +4,7 @@ include 'vendor/autoload.php';
 use Medium\MediumStateManager;
 use Medium\MediumAuthorizeUrl;
 use Medium\MediumAuth;
+use Medium\MediumMe;
 
 $client_id = '614518c4592a';
 $secret = '3d8a15d7b0e73d278d18833380a7583cacc7ab43';
@@ -42,6 +43,19 @@ if( empty($code) ) {
 
     echo '<pre>';
     var_dump($token);
+    echo '</pre>';
+
+    $refresh = $auth->refreshToken($token["refresh_token"]);
+
+    echo '<pre>';
+    var_dump($refresh);
+    echo '</pre>';
+
+    $me = new MediumMe($token["access_token"]);
+    $user = $me->getUser();
+
+    echo '<pre>';
+    var_dump($user);
     echo '</pre>';
 
  }

@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Medium\\MediumAuth' => $baseDir . '/src/MediumAuth.php',
     'Medium\\MediumAuthorizeUrl' => $baseDir . '/src/MediumAuthorizeUrl.php',
+    'Medium\\MediumMe' => $baseDir . '/src/MediumMe.php',
     'Medium\\MediumRequest' => $baseDir . '/src/MediumRequest.php',
     'Medium\\MediumStateManager' => $baseDir . '/src/MediumStateManager.php',
 );
