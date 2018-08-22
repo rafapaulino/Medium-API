@@ -23,7 +23,10 @@ class MediumRequest
 
             if ( count($data) > 0 ) {
                 //url-ify the data for the POST
-                foreach($data as $key => $value) { $fields_string .= $key . '=' . $value . '&'; }
+                foreach($data as $key => $value) { 
+                    $value = ((is_array($value)) ? implode(",",$value): $value);
+                    $fields_string .= $key . '=' . $value . '&'; 
+                }
                 rtrim($fields_string, '&');
             }
     
